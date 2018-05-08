@@ -19,7 +19,3 @@ logstash_install_plugins:
 logstash_version: 5.5.3
 logstash_install_dir: /usr/share/logstash
 
-# logstash.yml vars
-logstash_path_data: /var/lib/logstash
-logstash_path_config: /etc/logstash/conf.d
-logstash_path_logs: /var/log/logstash
