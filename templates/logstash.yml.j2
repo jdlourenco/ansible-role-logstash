@@ -24,7 +24,7 @@
 # Which directory should be used by logstash and its plugins
 # for any persistent needs. Defaults to LOGSTASH_HOME/data
 #
-path.data: {{ logstash_path_data }}
+{% if logstash_path_data is defined %} path.data: {{ logstash_path_data }} {% else %}#path.data: LOGSTASH_HOME/data {% endif %}
 #
 # ------------ Pipeline Settings --------------
 #
@@ -60,7 +60,7 @@ path.data: {{ logstash_path_data }}
 #
 # Where to fetch the pipeline configuration for the main pipeline
 #
-path.config: {{ logstash_path_config }}
+{% if logstash_path_config is defined %} path.config: {{ logstash_path_config }} {% else %}#path.config: /etc/logstash/ {% endif %}
 #
 # Pipeline configuration string for the main pipeline
 #
@@ -157,7 +157,7 @@ path.config: {{ logstash_path_config }}
 #   * trace
 #
 # log.level: info
-path.logs: {{ logstash_path_logs }}
+{% if logstash_path_logs is defined %}path.logs: {{ logstash_path_logs }} {% else %}#path.logs: /var/log/logstash {% endif %}
 #
 # ------------ Other Settings --------------
 #
