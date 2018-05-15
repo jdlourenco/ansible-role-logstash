@@ -18,4 +18,5 @@ logstash_install_plugins:
 
 logstash_version: 5.5.3
 logstash_install_dir: /usr/share/logstash
+logstash_path_logs: /var/log/logstash
 
