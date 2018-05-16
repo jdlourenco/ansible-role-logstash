@@ -34,7 +34,9 @@
 #
 # This defaults to the number of the host's CPU cores.
 #
-# pipeline.workers: 2
+{% if logstash_pipeline_workers is defined %} pipeline.workers: {{ logstash_pipeline_workers }} {% else %}#pipeline.workers: 2 {% endif %}
+
+# 
 #
 # How many workers should be used per output plugin instance
 #
