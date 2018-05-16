@@ -24,7 +24,7 @@
 # Which directory should be used by logstash and its plugins
 # for any persistent needs. Defaults to LOGSTASH_HOME/data
 #
-{% if logstash_path_data is defined %} path.data: {{ logstash_path_data }} {% else %}#path.data: LOGSTASH_HOME/data {% endif %}
+{% if logstash_path_data is defined %}path.data: {{ logstash_path_data }} {% else %}#path.data: LOGSTASH_HOME/data {% endif %}
 
 #
 # ------------ Pipeline Settings --------------
@@ -34,7 +34,7 @@
 #
 # This defaults to the number of the host's CPU cores.
 #
-{% if logstash_pipeline_workers is defined %} pipeline.workers: {{ logstash_pipeline_workers }} {% else %}#pipeline.workers: 2 {% endif %}
+{% if logstash_pipeline_workers is defined %}pipeline.workers: {{ logstash_pipeline_workers }} {% else %}#pipeline.workers: 2 {% endif %}
 
 # 
 #
@@ -63,7 +63,7 @@
 #
 # Where to fetch the pipeline configuration for the main pipeline
 #
-{% if logstash_path_config is defined %} path.config: {{ logstash_path_config }} {% else %}#path.config: /etc/logstash/ {% endif %}
+{% if logstash_path_config is defined %}path.config: {{ logstash_path_config }} {% else %}#path.config: /etc/logstash/ {% endif %}
 
 #
 # Pipeline configuration string for the main pipeline
